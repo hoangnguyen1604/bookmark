@@ -1,4 +1,4 @@
-// Structured Export of 274 Curated Bookmarks
+// Structured Export of 279 Curated Bookmarks
 export const CATEGORIES = [
   {
     "id": "resources",
@@ -22,11 +22,11 @@ export const CATEGORIES = [
   },
   {
     "id": "ai-tools",
-    "title": "🤖 AI Tools (21)"
+    "title": "🤖 AI Tools (22)"
   },
   {
     "id": "tools",
-    "title": "🛠️ Tool Thiết kế (18)"
+    "title": "🛠️ Tool Thiết kế (22)"
   }
 ];
 
@@ -3733,6 +3733,90 @@ export const BOOKMARKS = [
       "beautiful",
       "crafted",
       "primitives"
+    ]
+  },
+  {
+    "id": "bm-274",
+    "title": "Overflow - User flow diagramming & presentation tool for design teams",
+    "url": "https://overflow.io/",
+    "category": "tools",
+    "domain": "overflow.io",
+    "date": "18/08/2026",
+    "tags": [
+      "overflow",
+      "userflow",
+      "diagram",
+      "presentation"
+    ]
+  },
+  {
+    "id": "bm-275",
+    "title": "FlowMapp - UX Planning Tool, Sitemaps & User Flows",
+    "url": "https://www.flowmapp.com/",
+    "category": "tools",
+    "domain": "flowmapp.com",
+    "date": "18/08/2026",
+    "tags": [
+      "flowmapp",
+      "sitemap",
+      "userflow",
+      "planning"
+    ]
+  },
+  {
+    "id": "bm-276",
+    "title": "Whimsical - Visual Workspace for Flowcharts, Wireframes & Mind Maps",
+    "url": "https://whimsical.com/",
+    "category": "tools",
+    "domain": "whimsical.com",
+    "date": "18/08/2026",
+    "tags": [
+      "whimsical",
+      "wireframes",
+      "flowcharts",
+      "workspace"
+    ]
+  },
+  {
+    "id": "bm-277",
+    "title": "Octopus.do - Visual Sitemap Builder & UX Architecture Tool",
+    "url": "https://octopus.do/",
+    "category": "tools",
+    "domain": "octopus.do",
+    "date": "18/08/2026",
+    "tags": [
+      "octopus",
+      "sitemap",
+      "architecture",
+      "builder"
+    ]
+  },
+  {
+    "id": "bm-278",
+    "title": "Relume AI - AI Website Builder, Sitemaps & Wireframe Generator",
+    "url": "https://www.relume.ai/",
+    "category": "ai-tools",
+    "domain": "relume.ai",
+    "date": "18/08/2026",
+    "tags": [
+      "relume",
+      "ai",
+      "wireframe",
+      "sitemaps"
+    ]
+  },
+  {
+    "id": "bm-279",
+    "title": "Bloub - Organic SVG Blob Shape Generator",
+    "url": "https://bloub.vercel.app/",
+    "category": "resources",
+    "domain": "bloub.vercel.app",
+    "date": "18/08/2026",
+    "tags": [
+      "bloub",
+      "svg",
+      "blob",
+      "generator"
     ]
   }
 ];

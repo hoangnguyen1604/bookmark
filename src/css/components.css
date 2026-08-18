@@ -1,0 +1,387 @@
+/* Filter Pills Bar (Horizontal Scroll) */
+.filter-pills-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  scrollbar-width: none;
+}
+.filter-pills-container::-webkit-scrollbar {
+  display: none;
+}
+
+.pill-item {
+  border: none;
+  background: var(--field);
+  color: var(--ink-2);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.pill-item:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+
+.pill-item.active {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-btn);
+  font-weight: 600;
+}
+
+.pill-count-tag {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+
+.pill-item.active .pill-count-tag {
+  color: var(--ink);
+}
+
+/* Bookmarks Grid / List Container */
+.bookmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.bookmarks-grid.list-view {
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+/* Bookmark Card (Title placed directly under logo) */
+.bookmark-card {
+  position: relative;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 18px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 180px;
+  transition: all var(--transition-fast);
+}
+
+.bookmark-card:hover {
+  background-color: var(--hover);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-raised);
+}
+
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.favicon-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-control);
+  background-color: var(--canvas);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.favicon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.card-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-btn {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink-3);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-control);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+.card-btn svg {
+  display: block;
+  pointer-events: none;
+}
+
+.card-btn:hover {
+  background: var(--hover-2);
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.card-btn.favorite-btn.active {
+  color: var(--orange);
+  background: var(--orange-tint);
+  border-color: var(--orange);
+}
+
+.card-btn.favorite-btn.active svg {
+  fill: var(--orange);
+  stroke: var(--orange);
+}
+
+.card-content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bookmark-title-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bookmark-title-text a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.bookmark-title-text a:hover {
+  color: var(--accent-ink);
+}
+
+.domain-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.date-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  opacity: 0.8;
+}
+
+.card-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.tag-chip {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background-color: var(--inset);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+}
+
+.cat-chip {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--field);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+/* Compact List View Adjustments */
+.bookmarks-grid.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bookmarks-grid.list-view .bookmark-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  min-height: 62px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.bookmarks-grid.list-view .card-left-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.bookmarks-grid.list-view .card-content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.bookmarks-grid.list-view .bookmark-title-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookmarks-grid.list-view .domain-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookmarks-grid.list-view .card-right-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.bookmarks-grid.list-view .card-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0;
+  padding-top: 0;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 640px) {
+  .bookmarks-grid.list-view .card-tags-row {
+    display: none;
+  }
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toast-msg {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  padding: 10px 16px;
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-overlay);
+  font-size: 12.5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: toastFade 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes toastFade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Empty Search State */
+.empty-search-box {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-window);
+  margin: 24px 0;
+}
+
+.empty-search-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: var(--ink-3);
+}
+
+.empty-search-box h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.empty-search-box p {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  margin-bottom: 16px;
+}
+
+.reset-btn {
+  background: var(--field);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  padding: 6px 14px;
+  border-radius: var(--radius-control);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: var(--hover);
+}
+
+mark.search-match {
+  background-color: var(--accent-tint);
+  color: var(--accent-ink);
+  border-radius: 2px;
+  padding: 0 2px;
+}

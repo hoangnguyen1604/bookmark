@@ -249,7 +249,6 @@ function renderCardHTML(item) {
             </h3>
             <div class="domain-text">
               ${globeIcon} <span>${item.domain}</span>
-              ${item.date ? `<span class="date-badge">• ${item.date}</span>` : ''}
             </div>
           </div>
         </div>
@@ -297,7 +296,6 @@ function renderCardHTML(item) {
 
         <div class="domain-text">
           ${globeIcon} <span>${item.domain}</span>
-          ${item.date ? `<span class="date-badge">• ${item.date}</span>` : ''}
         </div>
       </div>
 

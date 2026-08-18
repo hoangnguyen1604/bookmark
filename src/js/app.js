@@ -256,7 +256,6 @@ function renderCardHTML(item) {
 
         <div class="card-right-group">
           <div class="card-tags-row">
-            <span class="cat-chip">${getCategoryName(item.category)}</span>
             ${displayTags.map(t => `<span class="tag-chip">#${t}</span>`).join('')}
           </div>
           <div class="card-action-btns">
@@ -303,7 +302,6 @@ function renderCardHTML(item) {
       </div>
 
       <div class="card-tags-row">
-        <span class="cat-chip">${getCategoryName(item.category)}</span>
         ${item.tags.map(t => `<span class="tag-chip">#${t}</span>`).join('')}
       </div>
     </div>
